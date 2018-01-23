@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模板</title>
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="X-UA-Compatible" content="IE=10" >
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10" >
+    <!--[if !IE]><!--><script>
+    if (/*@cc_on!@*/false) {
+        document.documentElement.className+=' ie10';
+    }
+    </script><!--<![endif]-->
+    <script>
+        var isDev = '<%= htmlWebpackPlugin.options.isDev %>';
+        console.log(isDev)
+    </script>
+    <style>
+        body,html{
+            height: 100%;
+        }
+        #app{
+            background: #eff3f6;
+            width: 100%;
+            min-width: 1600px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<div id="app"></div>
+<%= htmlWebpackPlugin.options.isDev? '<script src="./vendor.dll.js" ></script>' : '' %>
+</body>
+</html>
