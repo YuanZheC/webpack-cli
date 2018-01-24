@@ -19,6 +19,7 @@ const baseConfig = {
 		//模块别名定义，方便后续直接引用别名，无须多写长长的地址
 		alias: {
 			utils: path.join(__dirname, '../src/utils'),
+			imgs: path.join(__dirname, '../src/imgs')
 		}
 	},
 	plugins: [
